@@ -11,6 +11,5 @@ gulpfile.js
 .eslintrc
 .editorconfig
 /bower.json
-/src
 preprocessor.js
 /examples
