@@ -135,7 +135,7 @@ var Modal = React.createClass({
                 {this.props.title}
               </h4>
             ) : null}
-            <Close onClick={this.props.onRequestClose} />
+            <Close onTouchTap={this.props.onRequestClose} />
           </div>
           <div className={this.setClassNamespace('popup-bd')}>
             {this.props.children}
@@ -150,7 +150,7 @@ var Modal = React.createClass({
     var closeIcon = this.props.closeIcon && !this.props.type ? (
       <Close
         spin
-        onClick={this.props.onRequestClose}/>) : null;
+        onTouchTap={this.props.onRequestClose}/>) : null;
 
     return (this.props.title || closeIcon) ? (
       <div className={this.prefixClass('hd')}>
@@ -172,7 +172,7 @@ var Modal = React.createClass({
       case 'alert':
         buttons = (
           <span
-            onClick={this.props.onConfirm}
+            onTouchTap={this.props.onConfirm}
             className={btnClass}>
             {this.props.confirmText}
           </span>);
@@ -183,7 +183,7 @@ var Modal = React.createClass({
           return (
             <span
               key={i}
-              onClick={i === 0 ? this.props.onCancel : this.handleConfirm}
+              onTouchTap={i === 0 ? this.props.onCancel : this.handleConfirm}
               className={btnClass}>
               {text}
             </span>
