@@ -40,7 +40,7 @@ var Navbar = React.createClass({
             return (
               <li key={i}
                   onTouchTap={this.props.onSelect.bind(this, item.link)}>
-                <a href={item.link}>
+                <a href="#">
                   {item.customIcon ? (
                     <img src={item.customIcon} alt={item.title}/>
                   ) : item.icon ? (
