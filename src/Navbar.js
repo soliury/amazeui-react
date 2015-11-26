@@ -39,6 +39,7 @@ var Navbar = React.createClass({
           {this.props.data.map(function(item, i) {
             return (
               <li key={i}
+                  className={item.active ? 'active' : ''}
                   onTouchTap={this.props.onSelect.bind(this, item.link)}>
                 <a href="#">
                   {item.customIcon ? (
